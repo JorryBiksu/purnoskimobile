@@ -65,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         dbHelper = new DBHelper(this);
+        cars = new ArrayList<>();
+        carAdapter = new CarAdapter(cars, this);
+
+        loadCars();
 
 
         addButton.setOnClickListener(new View.OnClickListener() {
